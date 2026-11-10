@@ -109,3 +109,107 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+/* Styles du mini-projet Tableau des départs de bus */
+.app-container {
+  padding: 24px;
+}
+
+.subtitle {
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.app-header {
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.filter-bar button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-bar button.is-active,
+.filter-bar button[aria-pressed="true"] {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+  font-weight: 600;
+}
+
+.departure-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.departure-card,
+.departure-details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.departure-card h3,
+.departure-details h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.departure-card p,
+.departure-details p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.departure-card.is-selected {
+  border: 2px solid #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.departure-card button,
+.departure-details button {
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.departure-card.is-selected button {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+
+.departure-details button {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+  font-weight: 500;
+}
